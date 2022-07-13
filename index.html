@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"">
+  <link rel="stylesheet" href="main.css">
+  <title>Timer</title>
+</head>
+<body style="background-color: #0f172a;">
+
+  <div class="timer">
+    <h1 class="timer-numbers 
+    text-white font-mono border-2 rounded px-3 py-5 text-4xl m-auto mt-40
+    
+    ">
+      <span class="days">00</span> :
+      <span class="houer">00</span> :
+      <span class="menut">00</span> :
+      <span class="second">00</span>
+    </h1>
+    <div class="timer-input m-auto mt-4 w-80">
+      <button type="button" id="pause" class="
+      bg-sky-600 hover:bg-sky-700 border-sky-800 pt-3 pb-3 pl-5 pr-5
+      border-2 rounded-md text-white transition-colors font-mono shadow-xl shadow-sky-900
+      ">Pause</button>
+      <button id="start" class="
+      bg-sky-600 hover:bg-sky-700 border-sky-800 pt-3 pb-3 pl-5 pr-5
+      border-2 rounded-md text-white transition-colors font-mono ml-5 shadow-xl shadow-sky-900
+      ">Start</button>
+      <button id="stop" class="
+      bg-sky-600 hover:bg-sky-700 border-sky-800 pt-3 pb-3 pl-5 pr-5
+      border-2 rounded-md text-white transition-colors font-mono ml-5 shadow-xl shadow-sky-900
+      ">Stop</button>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
