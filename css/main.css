@@ -1,0 +1,238 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: monospace;
+	color: #fff;
+	background: url('../img/4fea30d2395e228a9adc1e9e949ce62c59b5790d.jpg');
+	background-size: cover;
+}
+
+.container {
+	max-width: 1220px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.hero .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.results {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	margin-right: 50px;
+	margin-bottom: 20px;
+	height: 90vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scrollbar-width: none;
+}
+
+.results div + div {
+	margin-top: 15px;
+}
+
+.results__card {
+	width: 300px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 17px;
+	font-weight: bold;
+	background-color: #e82527;
+	padding: 5px 15px;
+	border-radius: 13px;
+}
+
+.timer {
+	width: 400px;
+	height: 400px;
+	background: url('../img/1630608694_24-papik-pro-p-mars-risunok-kraskami-27.png');
+	background-size: cover;
+	border-radius: 50%;
+	position: relative;
+	font-weight: bold;
+}
+
+@keyframes around {
+	0% {
+		transform: rotate(-51deg);
+	}
+
+	100% {
+		transform: rotate(669deg);
+	}
+}
+
+.timer__line {
+	transform: rotate(-51deg);
+	position: relative;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.animation {
+	animation: around 5s linear infinite;
+}
+
+.timer__line:before {
+	content: "";
+	transform: rotate(55deg);
+	position: absolute;
+	right: -23px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: url('../img/cartoon-rocket-isolated-vector-illustration_35093-10.png') center center;
+	background-size: cover;
+}
+
+.timer__body {
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 45px; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.timer__counter {
+	display: inline;
+}
+
+button {
+	border: 0;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+  	border: 0;
+  	vertical-align: middle;
+  	text-decoration: none;
+}
+
+.buttons {
+	position: relative;
+	z-index: 2;
+	margin-top: 50px;
+	display: flex;
+	align-items: flex-end;
+}
+
+#start, #pause {
+	margin-left: 35px;
+	margin-right: 35px;
+}
+
+#start, #pause {
+	width: 80px;
+	height: 60px;
+}
+
+#pause {
+	display: none;
+}
+
+#remove, #finish {
+	width: 70px;
+	height: 50px;
+}
+
+.btn {
+	border-radius: 10%;
+	text-transform: uppercase;
+	transition: 0.15s;
+	transform-style: preserve-3d;
+	background: #f34a4b;
+	color: #fff;
+	font-family: monospace;
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e82527;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #e82527, 0 0.625em 0 0 #b40d11;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn:hover {
+  background: #f34a4b;
+  transform: translate(0, 0.25em);
+}
+.btn:hover::before {
+  box-shadow: 0 0 0 2px #e82527, 0 0.5em 0 0 #b40d11;
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+.btn:active {
+  background: #f34a4b;
+  transform: translate(0em, 0.75em);
+}
+
+.btn:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  transform: translate3d(0, 0, -1em);
+}
+
+@media screen and (max-width: 1304px) {
+	.hero .container {
+		flex-direction: column;
+	}
+
+	.results {
+		position: relative;
+		margin-top: 60px;
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+
+	.timer {
+		width: 300px;
+		height: 300px;
+		margin: 50px auto;
+		color: 0;
+		font-family: monospace;
+	}
+
+	.timer__body {
+		width: 200px;
+		height: 200px;
+		font-size: 30px;
+	}
+
+	.timer__line::before {
+		width: 70px;
+		height: 70px;
+		right: -10px;
+	}
+}
